@@ -147,10 +147,11 @@ export default class Checklist {
    * @returns {Element}
    */
   render() {
-    this._elements.wrapper = make("div", [
-      this.CSS.baseBlock,
-      this.CSS.wrapper,
-    ]);
+    this._elements.wrapper = make(
+      "div",
+      [this.CSS.baseBlock, this.CSS.wrapper],
+      { id: this._id }
+    );
 
     /**
      * If there is no data, create first empty item
